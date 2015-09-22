@@ -49,6 +49,8 @@
 					<li><a class="active" href="index.php">Home</a><span> </span></li>
 					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
 					<li><a href="comidasycenas.php">Comidas y Cenas</a><span> </span></li>
+					<li><a href="postres.php">Postres</a><span> </span></li>
+					<li><a href="bebidas.php">Bebidas</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -63,73 +65,7 @@
 	</div>	
 	<!----end-header---->
 	<!--banner-starts-->
-	<div class="banner" id="home">
-		<section class="slider">
-                <div class="flexslider">
-                    <ul class="slides">
-						<li>
-							<div class="banner-top">
-							<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Donec interdum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-1.jpg" alt="" />
-								<h3>Aliquam bibendum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-				<li>
-					<div class="banner-top">
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Aliquam bibendum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-3.jpg" alt="" />
-								<h3>Quisque pharetra</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-				<li>
-					<div class="banner-top">
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-1.jpg" alt="" />
-								<h3>Quisque pharetra</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Donec interdum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-          </ul>
-        </div>
-      </section>
+	<div class="bannerHome" id="home">
 	</div>	
 	<!--banner-ends--> 
 	<!--FlexSlider-->
@@ -218,52 +154,6 @@
 	</div>
 </div>
 	<!--offer-starts-->
-	<div class="offer">
-		<div class="container">
-			<div class="offer-top heading">
-				<h4>Our Best Salads</h4>
-			</div>
-			<div class="offer-bottom">
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-1.jpg" alt="" />
-					<h6>Orange Salad</h6></a>
-					<h4><a href="single.html">Quisque sed neque</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-2.jpg" alt="" />
-					<h6>Mixed Salad</h6></a>
-					<h4><a href="single.html">Donec mattis nunc</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-3.jpg" alt="" />
-					<h6>Strawberry Salad</h6></a>
-					<h4><a href="single.html">Maecenas non risus</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-5.jpg" alt="" />
-					<h6>Grape Salad</h6></a>
-					<h4><a href="single.html">Nullam vitae nisl</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
 	<!--offer-ends--> 
 	<!--nature-starts--> 
 	<div class="nature">

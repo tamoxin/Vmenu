@@ -49,6 +49,8 @@
 					<li><a href="index.php">Home</a><span> </span></li>
 					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
 					<li><a class="active" href="comidasycenas.php">Comidas y Cenas</a><span> </span></li>
+					<li><a href="postres.php">Postres</a><span> </span></li>
+					<li><a href="bebidas.php">Bebidas</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -63,73 +65,7 @@
 	</div>	
 	<!----end-header---->
 	<!--banner-starts-->
-	<div class="banner" id="home">
-		<section class="slider">
-                <div class="flexslider">
-                    <ul class="slides">
-						<li>
-							<div class="banner-top">
-							<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Donec interdum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-1.jpg" alt="" />
-								<h3>Aliquam bibendum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-				<li>
-					<div class="banner-top">
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Aliquam bibendum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-3.jpg" alt="" />
-								<h3>Quisque pharetra</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-				<li>
-					<div class="banner-top">
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-1.jpg" alt="" />
-								<h3>Quisque pharetra</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Donec interdum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-          </ul>
-        </div>
-      </section>
+	<div class="bannerComidasyCenas" id="home">
 	</div>	
 	<!--banner-ends--> 
 	<!--FlexSlider-->

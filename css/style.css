@@ -224,7 +224,17 @@ ul.navig li:nth-of-type(3) {
   -ms-background-size: cover;
 }
 
-.bannerPastas{
+.bannerBebidas{
+  background: url(../images/bebidas.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerPasta{
   background: url(../images/pasta.jpg) no-repeat center;
   min-height: 640px;
   background-size: cover;
@@ -244,8 +254,68 @@ ul.navig li:nth-of-type(3) {
   -ms-background-size: cover;
 }
 
+.bannerHuevos{
+  background: url(../images/rancheros.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
 .bannerSandwich{
-  background: url(../images/sandich.jpg) no-repeat center;
+  background: url(../images/sandwich.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerDesayunoCompleto{
+  background: url(../images/desayunocompleto.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerLight{
+  background: url(../images/light.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerComidasyCenas{
+  background: url(../images/comidasycenas.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerPostres{
+  background: url(../images/postres.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerEntradas{
+  background: url(../images/entrada.jpg) no-repeat center;
   min-height: 640px;
   background-size: cover;
   -webkit-background-size: cover;
@@ -264,8 +334,8 @@ ul.navig li:nth-of-type(3) {
   -ms-background-size: cover;
 }
 
-.banner {
-  background: url(../images/steak.jpg) no-repeat center;
+.bannerHome{
+  background: url(../images/home.jpg) no-repeat center;
   min-height: 640px;
   background-size: cover;
   -webkit-background-size: cover;
@@ -273,6 +343,17 @@ ul.navig li:nth-of-type(3) {
   -o-background-size: cover;
   -ms-background-size: cover;
 }
+
+.bannerDesayuno{
+  background: url(../images/desayuno.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
 .banner-top {
 width: 100%;
   margin: 0% auto 0;

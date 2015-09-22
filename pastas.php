@@ -49,6 +49,8 @@
 					<li><a href="index.php">Home</a><span> </span></li>
 					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
 					<li><a class="active" href="comidasycenas.php">Comidas y Cenas</a><span> </span></li>
+					<li><a href="postres.php">Postres</a><span> </span></li>
+					<li><a href="bebidas.php">Bebidas</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -63,73 +65,7 @@
 	</div>	
 	<!----end-header---->
 	<!--banner-starts-->
-	<div class="banner" id="home">
-		<section class="slider">
-                <div class="flexslider">
-                    <ul class="slides">
-						<li>
-							<div class="banner-top">
-							<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Donec interdum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-1.jpg" alt="" />
-								<h3>Aliquam bibendum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-				<li>
-					<div class="banner-top">
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Aliquam bibendum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-3.jpg" alt="" />
-								<h3>Quisque pharetra</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-				<li>
-					<div class="banner-top">
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-1.jpg" alt="" />
-								<h3>Quisque pharetra</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						<div class="col-md-6 banner-left">
-							<div class="bnr-one">
-								<img src="images/b-2.jpg" alt="" />
-								<h3>Donec interdum</h3>
-								<p>Ambrosia is a Traditional fruit salad</p>
-							</div>
-						</div>
-						
-						<div class="clearfix"> </div>
-					</div>
-				</li>
-          </ul>
-        </div>
-      </section>
+	<div class="bannerPasta" id="home">
 	</div>	
 	<!--banner-ends--> 
 	<!--FlexSlider-->
@@ -149,86 +85,11 @@
     });
   </script>
 			<!--End-slider-script-->
-<div class="welcome">
-	<div class="container">
-		<h4>Pastas</h4>
-		            <h3><li><a href="ensaladas2.php">Ensaladas</a><span> </span></li></h3>
-					<h3><li><a href="sopasycremas.php">Sopas y Cremas</a><span> </span></li></h3>
-					<h3><li><a href="pastas.php">Pastas</a><span> </span></li></h3>
-					<h3><li><a href="pescadosymariscos.php">Pescados y Mariscos</a><span> </span></li></h3>
-					<h3><li><a href="carnes.php">Carnes</a><span> </span></li></h3>
-					<h3><li><a href="sandwiches.php">Sandwiches</a><span> </span></li></h3>
-					<h3><li><a href="antojitos.php">Antojitos Mexicanos</a><span> </span></li></h3>
-		<p>Ambrosia is a variation on the traditional fruit salad. Most ambrosia recipes contain fresh or sweetened pineapple, mandarin oranges or fresh orange sections, miniature marshmallows,[1] and coconut.[2]</p>
-	</div>
-</div>
-<div class="welcome-bottom">
-	<div class="container">
-		<div class="welcome-bottom-info">
-				<div class="col-md-8 slit-slider">
-					<section class="main">
-						<div class="ia-container">
-					<figure>
-						<img src="images/port-1.jpg" alt="image01" />
-						<input type="radio" name="radio-set" checked="checked"/>
-						<figcaption><span>Juicy Fruit Salad</span></figcaption>
-						<figure>
-							<img src="images/port-2.jpg" alt="image02" />
-							<input type="radio" name="radio-set" />
-							<figcaption><span>Fabulous Fruit Salad</span></figcaption>
-							<figure>
-								<img src="images/port-3.jpg" alt="image03" />
-								<input type="radio" name="radio-set" />
-								<figcaption><span>Blueberry Salad</span></figcaption>
-								<figure>
-									<img src="images/port-4.jpg" alt="image04" />
-									<input type="radio" name="radio-set" />
-									<figcaption><span>Apple Salad</span></figcaption>
-									<figure>
-										<img src="images/port-5.jpg" alt="image05" />
-										<input type="radio" name="radio-set" />
-										<figcaption><span>Strawberry Salad</span></figcaption>
-										<figure>
-											<img src="images/port-6.jpg" alt="image06" />
-											<input type="radio" name="radio-set" />
-											<figcaption><span>Orange Salad</span></figcaption>
-											<figure>
-												<img src="images/port-7.jpg" alt="image07" />
-												<input type="radio" name="radio-set" />
-												<figcaption><span>Mango Cashew Salad</span></figcaption>	
-												<figure>
-													<img src="images/port-8.jpg" alt="image08" />
-													<input id="ia-selector-last" type="radio" name="radio-set" />
-													<figcaption><span>Green Grape Salad</span></figcaption>
-												</figure>
-											</figure>
-										</figure>	
-									</figure>	
-								</figure>
-							</figure>
-						</figure>
-					</figure>
-				</div><!-- ia-container -->
-			</section>
-			</div>
-				<div class="col-md-4 slit-slider-text">
-					<h4>Vitae elementum diam molestie</h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. 
-						Nulla facilisi.Phasellus tempor erat id erat gravida pulvinar. Aenean est felis,
-						 ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In 
-						 sed magna tellus.Phasellus tempor erat id erat gravida pulvinar. Aenean est felis,
-						 ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In 
-						 sed magna tellus</p>
-				</div>
-				<div class="clearfix"> </div>
-				</div>
-	</div>
-</div>
 	<!--offer-starts-->
 	<div class="offer">
 		<div class="container">
 			<div class="offer-top heading">
-				<h4>Our Best Salads</h4>
+				<h4>Pastas</h4>
 			</div>
 			<div class="offer-bottom">
 				<div class="col-md-3 offer-left">
