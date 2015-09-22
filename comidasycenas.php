@@ -152,13 +152,13 @@
 <div class="welcome">
 	<div class="container">
 		<h4>Comidas y Cenas</h4>
-		            <h3><li><a href="index.php">Ensaladas</a><span> </span></li></h3>
-					<h3><li><a href="desayunos.php">Sopas y Cremas</a><span> </span></li></h3>
-					<h3><li><a href="sopasycremas.php">Pastas</a><span> </span></li></h3>
-					<h3><li><a href="index.php">Pescados y Mariscos</a><span> </span></li></h3>
-					<h3><li><a href="desayunos.php">Carnes</a><span> </span></li></h3>
-					<h3><li><a href="index.php">Sandwiches</a><span> </span></li></h3>
-					<h3><li><a href="desayunos.php">Antojitos Mexicanos</a><span> </span></li></h3>
+		            <h3><li><a href="ensaladas2.php">Ensaladas</a><span> </span></li></h3>
+					<h3><li><a href="sopasycremas.php">Sopas y Cremas</a><span> </span></li></h3>
+					<h3><li><a href="pastas.php">Pastas</a><span> </span></li></h3>
+					<h3><li><a href="pescadosymariscos.php">Pescados y Mariscos</a><span> </span></li></h3>
+					<h3><li><a href="carnes.php">Carnes</a><span> </span></li></h3>
+					<h3><li><a href="sandwiches.php">Sandwiches</a><span> </span></li></h3>
+					<h3><li><a href="antojitos.php">Antojitos Mexicanos</a><span> </span></li></h3>
 		<p>Ambrosia is a variation on the traditional fruit salad. Most ambrosia recipes contain fresh or sweetened pineapple, mandarin oranges or fresh orange sections, miniature marshmallows,[1] and coconut.[2]</p>
 	</div>
 </div>

@@ -151,7 +151,7 @@
 			<!--End-slider-script-->
 <div class="welcome">
 	<div class="container">
-		<h4>Pescados y Mariscos</h4>
+		<h4>Ensaladas</h4>
 		            <h3><li><a href="ensaladas2.php">Ensaladas</a><span> </span></li></h3>
 					<h3><li><a href="sopasycremas.php">Sopas y Cremas</a><span> </span></li></h3>
 					<h3><li><a href="pastas.php">Pastas</a><span> </span></li></h3>
