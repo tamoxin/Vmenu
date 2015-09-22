@@ -48,11 +48,7 @@
 				<ul class="navig">
 					<li><a class="active" href="index.php">Home</a><span> </span></li>
 					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
-					<li><a href="sopasycremas.php">Sopas y cremas</a><span> </span></li>
-					<li><a href="carnes.php">Carnes</a><span> </span></li>
-					<li><a href="pescadosymariscos.php">Pescados y mariscos</a><span> </span></li>
-					<li><a href="postres.php">Postres</a><span> </span></li>
-					<li><a href="bebidas.php">Bebidas</a><span> </span></li>
+					<li><a href="comidasycenas.php">Comidas y Cenas</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -155,7 +151,7 @@
 			<!--End-slider-script-->
 <div class="welcome">
 	<div class="container">
-		<h4>Welcome To Our Salads</h4>
+		<h4>Index</h4>
 		<p>Ambrosia is a variation on the traditional fruit salad. Most ambrosia recipes contain fresh or sweetened pineapple, mandarin oranges or fresh orange sections, miniature marshmallows,[1] and coconut.[2]</p>
 	</div>
 </div>
