@@ -46,13 +46,13 @@
 			<div class="navigation">
 			 <span class="menu"></span> 
 				<ul class="navig">
-					<li><a href="index.html">Home</a><span> </span></li>
-					<li><a href="about.html">Desayunos</a><span> </span></li>
-					<li><a class="active" href="sopasycremas.html">Sopas y cremas</a><span> </span></li>
-					<li><a href="pages.html">Carnes</a><span> </span></li>
-					<li><a href="gallery.html">Pescados y mariscos</a><span> </span></li>
-					<li><a href="contact.html">Postres</a><span> </span></li>
-					<li><a href="contact.html">Bebidas</a><span> </span></li>
+					<li><a href="index.php">Home</a><span> </span></li>
+					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
+					<li><a href="sopasycremas.php">Sopas y cremas</a><span> </span></li>
+					<li><a href="carnes.php">Carnes</a><span> </span></li>
+					<li><a href="pescadosymariscos.php">Pescados y mariscos</a><span> </span></li>
+					<li><a href="postres.php">Postres</a><span> </span></li>
+					<li><a class="active" href="bebidas.php">Bebidas</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
