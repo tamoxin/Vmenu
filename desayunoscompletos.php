@@ -151,8 +151,8 @@
 			<!--End-slider-script-->
 <div class="welcome">
 	<div class="container">
-		<h4>Desayunos</h4>
-		            <h3><li><a href="desayunoscompletos.php">Desayunos Completos</a><span> </span></li></h3>
+		<h4>Desayunos completos</h4>
+		            <h3><li><a class="active" href="desayunoscompletos.php">Desayunos Completos</a><span> </span></li></h3>
 					<h3><li><a href="light.php">Light</a><span> </span></li></h3>
 					<h3><li><a href="huevos.php">Huevos y especialidades mexicanas</a><span> </span></li></h3>
 					<h3><li><a href="entradas.php">Entradas</a><span> </span></li></h3>

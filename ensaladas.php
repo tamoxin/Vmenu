@@ -151,12 +151,12 @@
 			<!--End-slider-script-->
 <div class="welcome">
 	<div class="container">
-		<h4>Desayunos</h4>
+		<h4>Ensaladas</h4>
 		            <h3><li><a href="desayunoscompletos.php">Desayunos Completos</a><span> </span></li></h3>
 					<h3><li><a href="light.php">Light</a><span> </span></li></h3>
 					<h3><li><a href="huevos.php">Huevos y especialidades mexicanas</a><span> </span></li></h3>
 					<h3><li><a href="entradas.php">Entradas</a><span> </span></li></h3>
-					<h3><li><a href="ensaladas.php">Ensaladas</a><span> </span></li></h3>
+					<h3><li><a class="active" href="ensaladas.php">Ensaladas</a><span> </span></li></h3>
 		<p>Ambrosia is a variation on the traditional fruit salad. Most ambrosia recipes contain fresh or sweetened pineapple, mandarin oranges or fresh orange sections, miniature marshmallows,[1] and coconut.[2]</p>
 	</div>
 </div>
