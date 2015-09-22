@@ -193,6 +193,77 @@ ul.navig li:nth-of-type(3) {
 }
 /*--Header-Part-Ends-Here --*/
 /*--banner-starts--*/
+
+.bannerSopas{
+  background: url(../images/sopa.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerEnsaladas{
+  background: url(../images/ensalada.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerPescado{
+  background: url(../images/pescado.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerPastas{
+  background: url(../images/pasta.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerCarne{
+  background: url(../images/steak.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerSandwich{
+  background: url(../images/sandich.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
+.bannerAntojitos{
+  background: url(../images/antojitos.jpg) no-repeat center;
+  min-height: 640px;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+}
+
 .banner {
   background: url(../images/steak.jpg) no-repeat center;
   min-height: 640px;

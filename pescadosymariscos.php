@@ -63,7 +63,7 @@
 	</div>	
 	<!----end-header---->
 	<!--banner-starts-->
-	<div class="banner" id="home">
+	<div class="bannerPescado" id="home">
 		<section class="slider">
                 <div class="flexslider">
                     <ul class="slides">
