@@ -1,3 +1,82 @@
+<?php 
+	$name="";
+    $price="";
+    $description="";
+	$platillos="";
+	$image="";
+	
+     //se establece la conexión con el servidor
+    $mysqli = mysqli_connect("localhost", "phpuser", "phpuser", "vmenu");
+
+    if (mysqli_connect_errno()) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+    }
+    else{
+    	//se establece el query para la consulta
+        $sql = 'SELECT Name, Price, Description, ID FROM Dishes WHERE Category = 13';
+
+        $cons = mysqli_query($mysqli, $sql);
+
+        if ($cons) {
+        	//si hubo respuesta a la consulta
+        	while ($arreglo = mysqli_fetch_array($cons, MYSQLI_ASSOC)) {
+        		$tabla['name'][] = $arreglo['Name'];
+        		$tabla['price'][] = $arreglo['Price'];
+        		$tabla['description'][] = $arreglo['Description'];
+				$tabla['image'][] = $arreglo['ID'];
+        	}
+
+
+        	for ($x=0; $x <= count($tabla['name'])-1; $x++){
+        		$name = $tabla['name'][$x];
+        		$price = $tabla['price'][$x];
+        		$description = $tabla['description'][$x];
+				$image = $tabla['image'][$x];
+				$platillos.='<div class="col-md-3 offer-left">
+						<a href="single.html"><img src="images/menu/'.$image.'.jpg" alt="" />
+						<h6> $'.$price.'</h6></a>
+						<h4><a href="single.html"> '.$name.'</a></h4>
+						<p> '.$description.'</p>
+						<div class="o-btn">	
+                    	<form method="post"> 
+		      				<button type="submit" name="agregar" value="'.$name.'">Agregar a la orden</button> 
+                    	</form>
+						</div>
+						</div>';
+        	}
+        }
+        else{
+        	printf("Could not retrieve records: %s\n", mysqli_error($mysqli));
+        }
+
+        //borra el resultado del query
+        mysqli_free_result($cons);
+        mysqli_close($mysqli); 
+    }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    $i = 0;
+    
+    // Start the session
+	session_start();
+
+	if(isset($_SESSION['Platillos'])){
+		foreach(unserialize($_SESSION['Platillos']) as $x) { 
+			$orden[]=$x;
+			$i++; 
+		}
+	}
+
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $orden[$i] = $_POST["agregar"]; 
+        $i++;
+        $_SESSION['Platillos'] = serialize($orden);
+
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +85,7 @@
 <title>Vmenu_Equipo4</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html"/>
 <meta name="keywords" content="" />
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
@@ -92,42 +171,7 @@
 				<h4>Antojitos</h4>
 			</div>
 			<div class="offer-bottom">
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-1.jpg" alt="" />
-					<h6>Orange Salad</h6></a>
-					<h4><a href="single.html">Quisque sed neque</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-2.jpg" alt="" />
-					<h6>Mixed Salad</h6></a>
-					<h4><a href="single.html">Donec mattis nunc</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-3.jpg" alt="" />
-					<h6>Strawberry Salad</h6></a>
-					<h4><a href="single.html">Maecenas non risus</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-5.jpg" alt="" />
-					<h6>Grape Salad</h6></a>
-					<h4><a href="single.html">Nullam vitae nisl</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
+				<?php echo $platillos;?>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
