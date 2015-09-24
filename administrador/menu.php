@@ -4,7 +4,7 @@
     $price="";
     $category="";
 
-	 //se establece la conexi�n con el servidor
+	 //se establece la conexión con el servidor
     $mysqli = mysqli_connect("localhost", "phpuser", "phpuser", "vmenu");
 
     if (mysqli_connect_errno()) {
@@ -94,7 +94,8 @@
 				<ul class="navig">
 					<li><a href="administrador.php">Home</a><span> </span></li>
 					<li><a href="usuarios.php">Usuarios</a><span> </span></li>
-					<li><a class="active" href="menu.php">Menú</a><span> </span></li>
+					<li><a class="active" href="menu.php">Men&uacute</a><span> </span></li>
+					<li><a href="cocina.php">Cocina</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -129,12 +130,13 @@
     });
   </script>
 			<!--End-slider-script-->
+<center>
 <table border="1">
   <tr>
-    <td>id</td>
-    <td>nombre</td>
-    <td>precio</td>
-    <td>categoría</td>
+    <td>ID</td>
+    <td>Nombre</td>
+    <td>Precio</td>
+    <td>Categor&iacutea</td>
   </tr>
   <tr>
     <td><?php echo $id; ?></td>
@@ -151,3 +153,5 @@
 <form action="borrarplatillo.php">
 <input type="submit" value="Borrar platillo"></input>
 </form>
+
+</center>

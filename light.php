@@ -1,3 +1,74 @@
+<?php 
+	$name="";
+    $price="";
+    $description="";
+	$platillos="";
+	$image="";
+	
+     //se establece la conexión con el servidor
+    $mysqli = mysqli_connect("localhost", "phpuser", "phpuser", "vmenu");
+
+    if (mysqli_connect_errno()) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+    }
+    else{
+    	//se establece el query para la consulta
+        $sql = 'SELECT Name, Price, Description, ID FROM Dishes WHERE Category = 7';
+
+        $cons = mysqli_query($mysqli, $sql);
+
+        if ($cons) {
+        	//si hubo respuesta a la consulta
+        	while ($arreglo = mysqli_fetch_array($cons, MYSQLI_ASSOC)) {
+        		$tabla['name'][] = $arreglo['Name'];
+        		$tabla['price'][] = $arreglo['Price'];
+        		$tabla['description'][] = $arreglo['Description'];
+				$tabla['image'][] = $arreglo['ID'];
+        	}
+
+
+        	for ($x=0; $x <= count($tabla['name'])-1; $x++){
+        		$name = $tabla['name'][$x];
+        		$price = $tabla['price'][$x];
+        		$description = $tabla['description'][$x];
+				$image = $tabla['image'][$x];
+				$platillos.='<div class="col-md-3 offer-left">
+						<a href="single.html"><img src="images/menu/'.$image.'.jpg"alt="" />
+						<h6> $'.$price.'</h6></a>
+						<h4><a href="single.html"> '.$name.'</a></h4>
+						<p> '.$description.'</p>
+						<div class="o-btn">	
+                    	<form action="ordenchecar.php" method="post"> 
+		      				<button type="submit" name="agregar" value="'.$name.'">Agregar a la orden</button> 
+                    	</form>
+						</div>
+						</div>';
+        	}
+        }
+        else{
+        	printf("Could not retrieve records: %s\n", mysqli_error($mysqli));
+        }
+
+		//Segunda consulta
+		$sql2 = 'SELECT Dato FROM didYouKnow WHERE ID = 7';
+		$cons2 = mysqli_query($mysqli, $sql2);
+		if($cons2){
+			while ($arreglo2 = mysqli_fetch_array($cons2, MYSQLI_ASSOC)) {
+        		$tabla2['dato'][] = $arreglo2['Dato'];
+			}
+			$dato=$tabla2['dato'][0];
+		}else{
+        	printf("Could not retrieve records: %s\n", mysqli_error($mysqli));
+        }
+		
+        //borra el resultado del query
+        mysqli_free_result($cons);
+        mysqli_close($mysqli); 
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +77,7 @@
 <title>Vmenu_Equipo4</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html;" />
 <meta name="keywords" content="" />
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
@@ -92,108 +163,24 @@
 				<h4>Light</h4>
 			</div>
 			<div class="offer-bottom">
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-1.jpg" alt="" />
-					<h6>Orange Salad</h6></a>
-					<h4><a href="single.html">Quisque sed neque</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-2.jpg" alt="" />
-					<h6>Mixed Salad</h6></a>
-					<h4><a href="single.html">Donec mattis nunc</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-3.jpg" alt="" />
-					<h6>Strawberry Salad</h6></a>
-					<h4><a href="single.html">Maecenas non risus</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-5.jpg" alt="" />
-					<h6>Grape Salad</h6></a>
-					<h4><a href="single.html">Nullam vitae nisl</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
+				<?php echo $platillos ?>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
 	</div>
 	<!--offer-ends--> 
 	<!--nature-starts--> 
-	<div class="nature">
+	<div class="nature7">
 			<div class="nature-top">
-				<h3>Maecenas ornare lobortis</h3>
-				<p>Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either in their own juices or a syrup. When served as an appetizer or as a dessert, a fruit salad is sometimes known as a fruit cocktail or fruit cup. In different forms fruit salad can be served as an appetizer, a side-salad, or a dessert.</p>
+				<h3>&#191Sab&iacuteas que?</h3>
+				<p><?php echo $dato?></p>
 			</div>
 		</div>
 	<!--nature-ends--> 
 	<!--footer-->
-		<div class="footer">
-			<div class="footer-grids">
-				<div class="container">
-					<div class="col-md-3 footer-grid">
-						<h4>Services</h4>
-						<ul>
-							<li><a href="#">Contact Customer Service</a></li>
-							<li><a href="#">Free Delivery</a></li>
-							<li><a href="#">View your Wishlist</a></li>
-							<li><a href="#">Ring Size Guide</a></li>
-							<li><a href="#">Returns</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid">
-							<h4>Information</h4>
-						<ul>
-							<li><a href="#">Gift certificates</a></li>
-							<li><a href="#">Jewellery care guide</a></li>
-							<li><a href="#">International customers</a></li>
-							<li><a href="#">Wholesale enquires</a></li>
-							<li><a href="#">Returns</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid">
-						<h4>More details</h4>
-						<ul>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms & Condition</a></li>
-							<li><a href="#">Secure payment</a></li>
-							<li><a href="#">Site map</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid contact-grid">
-						<h4>Contact us</h4>
-						<ul>
-							<li><span class="c-icon"> </span>Newyork Still Road.</li>
-							<li><span class="c-icon1"> </span><a href="mailto:info@example.com">mail@example.com</a></li>
-							<li><span class="c-icon2"> </span>756 gt globel Place</li>
-						</ul>
-						<ul class="social-icons">
-							<li><a href="#"><span class="facebook"> </span></a></li>
-							<li><a href="#"><span class="twitter"> </span></a></li>
-							<li><a href="#"><span class="thumb"> </span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
 			<div class="copy">
-		              <p>© 2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
-		            </div>
+		              <p>2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
+		    </div>
 	<!--/footer-->
 		<script type="text/javascript">
 									$(document).ready(function() {

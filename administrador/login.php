@@ -46,7 +46,7 @@
 			<div class="navigation">
 			 <span class="menu"></span> 
 				<ul class="navig">
-					<li><h1>Bienvenido!</h1><span></span></li>
+					<li><h1>¡Bienvenido!</h1><span></span></li>
 					<li><form action="connect.php" method="POST">
 						<h3>Usuario</h3>
 				<input type="text" name="user"></input>

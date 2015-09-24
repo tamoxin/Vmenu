@@ -39,8 +39,8 @@
 						<h4><a href="single.html"> '.$name.'</a></h4>
 						<p> '.$description.'</p>
 						<div class="o-btn">	
-                    	<form method="post"> 
-		      				<input type="submit" name="'.$name.'" value="Agregar a la orden">
+                    	<form action="ordenchecar.php" method="post"> 
+		      				<button type="submit" name="agregar" value="'.$name.'">Agregar a la orden</button> 
                     	</form>
 						</div>
 						</div>';
@@ -216,7 +216,7 @@
 			</div>
 		</div>
 			<div class="copy">
-		              <p>© 2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
+		              <p>2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
 		            </div>
 	<!--/footer-->
 		<script type="text/javascript">

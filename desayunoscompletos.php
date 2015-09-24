@@ -33,23 +33,53 @@
         		$price = $tabla['price'][$x];
         		$description = $tabla['description'][$x];
 				$image = $tabla['image'][$x];
-				$platillos.='<div class="col-md-3 offer-left">
-						<a href="single.html"><img src="images/menu/'.$image.'.jpg" alt="" />
-						<h6> $'.$price.'</h6></a>
-						<h4><a href="single.html"> '.$name.'</a></h4>
-						<p> '.$description.'</p>
-						<div class="o-btn">	
-                    	<form method="post"> 
-		      				<button type="submit" name="agregar" value="'.$name.'">Agregar a la orden</button> 
-                    	</form>
-						</div>
-						</div>';
+				if($x%4 != 0){
+					$platillos.='
+							<div class="col-md-3 offer-left">
+							<a href="single.html"><img src="images/menu/'.$image.'.jpg"alt="" />
+							<h6> $'.$price.'</h6></a>
+							<h4><a href="single.html"> '.$name.'</a></h4>
+							<p> '.$description.'</p>
+							<div class="o-btn">	
+							<form action="ordenchecar.php" method="post"> 
+								<button type="submit" name="agregar" value="'.$name.'">Agregar a la orden</button> 
+							</form>
+							</div>
+							</div>';
+				}
+				else{
+					$platillos.='<div class="clearfix"> </div>
+							<br> 
+							<div class="col-md-3 offer-left">
+							<a href="single.html"><img src="images/menu/'.$image.'.jpg"alt="" />
+							<h6> $'.$price.'</h6></a>
+							<h4><a href="single.html"> '.$name.'</a></h4>
+							<p> '.$description.'</p>
+							<div class="o-btn">	
+							<form action="ordenchecar.php" method="post"> 
+								<button type="submit" name="agregar" value="'.$name.'">Agregar a la orden</button> 
+							</form>
+							</div>
+							</div>';
+				}
         	}
         }
         else{
         	printf("Could not retrieve records: %s\n", mysqli_error($mysqli));
         }
 
+		//Segunda consulta
+		$sql2 = 'SELECT Dato FROM didYouKnow WHERE ID = 6';
+		$cons2 = mysqli_query($mysqli, $sql2);
+		if($cons2){
+			while ($arreglo2 = mysqli_fetch_array($cons2, MYSQLI_ASSOC)) {
+        		$tabla2['dato'][] = $arreglo2['Dato'];
+			}
+			$dato=$tabla2['dato'][0];
+		}else{
+        	printf("Could not retrieve records: %s\n", mysqli_error($mysqli));
+        }
+		
         //borra el resultado del query
         mysqli_free_result($cons);
         mysqli_close($mysqli); 
@@ -157,65 +187,16 @@
 	</div>
 	<!--offer-ends--> 
 	<!--nature-starts--> 
-	<div class="nature">
+	<div class="nature6">
 			<div class="nature-top">
-				<h3>Maecenas ornare lobortis</h3>
-				<p>Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either in their own juices or a syrup. When served as an appetizer or as a dessert, a fruit salad is sometimes known as a fruit cocktail or fruit cup. In different forms fruit salad can be served as an appetizer, a side-salad, or a dessert.</p>
+				<h3>&#191Sab&iacuteas que?</h3>
+				<p><?php echo $dato?></p>
 			</div>
 		</div>
 	<!--nature-ends--> 
 	<!--footer-->
-		<div class="footer">
-			<div class="footer-grids">
-				<div class="container">
-					<div class="col-md-3 footer-grid">
-						<h4>Services</h4>
-						<ul>
-							<li><a href="#">Contact Customer Service</a></li>
-							<li><a href="#">Free Delivery</a></li>
-							<li><a href="#">View your Wishlist</a></li>
-							<li><a href="#">Ring Size Guide</a></li>
-							<li><a href="#">Returns</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid">
-							<h4>Information</h4>
-						<ul>
-							<li><a href="#">Gift certificates</a></li>
-							<li><a href="#">Jewellery care guide</a></li>
-							<li><a href="#">International customers</a></li>
-							<li><a href="#">Wholesale enquires</a></li>
-							<li><a href="#">Returns</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid">
-						<h4>More details</h4>
-						<ul>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms & Condition</a></li>
-							<li><a href="#">Secure payment</a></li>
-							<li><a href="#">Site map</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid contact-grid">
-						<h4>Contact us</h4>
-						<ul>
-							<li><span class="c-icon"> </span>Newyork Still Road.</li>
-							<li><span class="c-icon1"> </span><a href="mailto:info@example.com">mail@example.com</a></li>
-							<li><span class="c-icon2"> </span>756 gt globel Place</li>
-						</ul>
-						<ul class="social-icons">
-							<li><a href="#"><span class="facebook"> </span></a></li>
-							<li><a href="#"><span class="twitter"> </span></a></li>
-							<li><a href="#"><span class="thumb"> </span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
 			<div class="copy">
-		              <p>© 2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
+		              <p>2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
 		            </div>
 	<!--/footer-->
 		<script type="text/javascript">

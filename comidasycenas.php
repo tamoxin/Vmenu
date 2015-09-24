@@ -88,186 +88,26 @@
 <div class="welcome">
 	<div class="container">
 		<h4>Comidas y Cenas</h4>
-		            <h3><li><a href="ensaladas2.php">Ensaladas</a><span> </span></li></h3>
+		            <h3><li><a href="ensaladas.php">Ensaladas</a><span> </span></li></h3>
 					<h3><li><a href="sopasycremas.php">Sopas y Cremas</a><span> </span></li></h3>
 					<h3><li><a href="pastas.php">Pastas</a><span> </span></li></h3>
 					<h3><li><a href="pescadosymariscos.php">Pescados y Mariscos</a><span> </span></li></h3>
 					<h3><li><a href="carnes.php">Carnes</a><span> </span></li></h3>
 					<h3><li><a href="sandwiches.php">Sandwiches</a><span> </span></li></h3>
 					<h3><li><a href="antojitos.php">Antojitos Mexicanos</a><span> </span></li></h3>
-		<p>Ambrosia is a variation on the traditional fruit salad. Most ambrosia recipes contain fresh or sweetened pineapple, mandarin oranges or fresh orange sections, miniature marshmallows,[1] and coconut.[2]</p>
 	</div>
 </div>
 <div class="welcome-bottom">
 	<div class="container">
-		<div class="welcome-bottom-info">
-				<div class="col-md-8 slit-slider">
-					<section class="main">
-						<div class="ia-container">
-					<figure>
-						<img src="images/port-1.jpg" alt="image01" />
-						<input type="radio" name="radio-set" checked="checked"/>
-						<figcaption><span>Juicy Fruit Salad</span></figcaption>
-						<figure>
-							<img src="images/port-2.jpg" alt="image02" />
-							<input type="radio" name="radio-set" />
-							<figcaption><span>Fabulous Fruit Salad</span></figcaption>
-							<figure>
-								<img src="images/port-3.jpg" alt="image03" />
-								<input type="radio" name="radio-set" />
-								<figcaption><span>Blueberry Salad</span></figcaption>
-								<figure>
-									<img src="images/port-4.jpg" alt="image04" />
-									<input type="radio" name="radio-set" />
-									<figcaption><span>Apple Salad</span></figcaption>
-									<figure>
-										<img src="images/port-5.jpg" alt="image05" />
-										<input type="radio" name="radio-set" />
-										<figcaption><span>Strawberry Salad</span></figcaption>
-										<figure>
-											<img src="images/port-6.jpg" alt="image06" />
-											<input type="radio" name="radio-set" />
-											<figcaption><span>Orange Salad</span></figcaption>
-											<figure>
-												<img src="images/port-7.jpg" alt="image07" />
-												<input type="radio" name="radio-set" />
-												<figcaption><span>Mango Cashew Salad</span></figcaption>	
-												<figure>
-													<img src="images/port-8.jpg" alt="image08" />
-													<input id="ia-selector-last" type="radio" name="radio-set" />
-													<figcaption><span>Green Grape Salad</span></figcaption>
-												</figure>
-											</figure>
-										</figure>	
-									</figure>	
-								</figure>
-							</figure>
-						</figure>
-					</figure>
-				</div><!-- ia-container -->
-			</section>
-			</div>
-				<div class="col-md-4 slit-slider-text">
-					<h4>Vitae elementum diam molestie</h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. 
-						Nulla facilisi.Phasellus tempor erat id erat gravida pulvinar. Aenean est felis,
-						 ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In 
-						 sed magna tellus.Phasellus tempor erat id erat gravida pulvinar. Aenean est felis,
-						 ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In 
-						 sed magna tellus</p>
-				</div>
-				<div class="clearfix"> </div>
-				</div>
 	</div>
 </div>
 	<!--offer-starts-->
-	<div class="offer">
-		<div class="container">
-			<div class="offer-top heading">
-				<h4>Our Best Salads</h4>
-			</div>
-			<div class="offer-bottom">
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-1.jpg" alt="" />
-					<h6>Orange Salad</h6></a>
-					<h4><a href="single.html">Quisque sed neque</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-2.jpg" alt="" />
-					<h6>Mixed Salad</h6></a>
-					<h4><a href="single.html">Donec mattis nunc</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-3.jpg" alt="" />
-					<h6>Strawberry Salad</h6></a>
-					<h4><a href="single.html">Maecenas non risus</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-3 offer-left">
-					<a href="single.html"><img src="images/o-5.jpg" alt="" />
-					<h6>Grape Salad</h6></a>
-					<h4><a href="single.html">Nullam vitae nisl</a></h4>
-					<p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie. Nulla facilisi.</p>
-					<div class="o-btn">
-						<a href="single.html">Read More</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
 	<!--offer-ends--> 
 	<!--nature-starts--> 
-	<div class="nature">
-			<div class="nature-top">
-				<h3>Maecenas ornare lobortis</h3>
-				<p>Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either in their own juices or a syrup. When served as an appetizer or as a dessert, a fruit salad is sometimes known as a fruit cocktail or fruit cup. In different forms fruit salad can be served as an appetizer, a side-salad, or a dessert.</p>
-			</div>
-		</div>
 	<!--nature-ends--> 
 	<!--footer-->
-		<div class="footer">
-			<div class="footer-grids">
-				<div class="container">
-					<div class="col-md-3 footer-grid">
-						<h4>Services</h4>
-						<ul>
-							<li><a href="#">Contact Customer Service</a></li>
-							<li><a href="#">Free Delivery</a></li>
-							<li><a href="#">View your Wishlist</a></li>
-							<li><a href="#">Ring Size Guide</a></li>
-							<li><a href="#">Returns</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid">
-							<h4>Information</h4>
-						<ul>
-							<li><a href="#">Gift certificates</a></li>
-							<li><a href="#">Jewellery care guide</a></li>
-							<li><a href="#">International customers</a></li>
-							<li><a href="#">Wholesale enquires</a></li>
-							<li><a href="#">Returns</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid">
-						<h4>More details</h4>
-						<ul>
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms & Condition</a></li>
-							<li><a href="#">Secure payment</a></li>
-							<li><a href="#">Site map</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-grid contact-grid">
-						<h4>Contact us</h4>
-						<ul>
-							<li><span class="c-icon"> </span>Newyork Still Road.</li>
-							<li><span class="c-icon1"> </span><a href="mailto:info@example.com">mail@example.com</a></li>
-							<li><span class="c-icon2"> </span>756 gt globel Place</li>
-						</ul>
-						<ul class="social-icons">
-							<li><a href="#"><span class="facebook"> </span></a></li>
-							<li><a href="#"><span class="twitter"> </span></a></li>
-							<li><a href="#"><span class="thumb"> </span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
 			<div class="copy">
-		              <p>© 2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
+		              <p>2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
 		            </div>
 	<!--/footer-->
 		<script type="text/javascript">

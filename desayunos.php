@@ -97,16 +97,10 @@
 	</div>
 </div>
 	<!--nature-starts--> 
-	<div class="nature">
-			<div class="nature-top">
-				<h3>Maecenas ornare lobortis</h3>
-				<p>Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either in their own juices or a syrup. When served as an appetizer or as a dessert, a fruit salad is sometimes known as a fruit cocktail or fruit cup. In different forms fruit salad can be served as an appetizer, a side-salad, or a dessert.</p>
-			</div>
-		</div>
 	<!--nature-ends--> 
 	<!--footer-->
 			<div class="copy">
-		              <p>© 2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
+		              <p>2015 Holiday inn. All Rights Reserved | Design by Equipo 4 <a href="http://itesm.com.mx/">ITESM</a> </p>
 		    </div>
 	<!--/footer-->
 		<script type="text/javascript">

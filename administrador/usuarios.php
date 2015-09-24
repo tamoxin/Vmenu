@@ -46,7 +46,7 @@
 <title>Vmenu_Equipo4</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html;" />
 <meta name="keywords" content="" />
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
@@ -88,7 +88,8 @@
 				<ul class="navig">
 					<li><a href="administrador.php">Home</a><span> </span></li>
 					<li><a class="active" href="usuarios.php">Usuarios</a><span> </span></li>
-					<li><a href="menu.php">Menú</a><span> </span></li>
+					<li><a href="menu.php">Men&uacute</a><span> </span></li>
+					<li><a href="cocina.php">Cocina</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -123,6 +124,7 @@
     });
   </script>
 			<!--End-slider-script-->
+<center>
 <table border="1" id = "responsivetable">
   <tr>
     <td>usuario</td>
@@ -136,6 +138,8 @@
   </tr>
 </table>
 
+
 <form action="regusuario.php">
 <input type="submit" value="Crear usuario"></input>
+</center>
 </form>
