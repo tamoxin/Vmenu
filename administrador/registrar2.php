@@ -4,12 +4,18 @@ $nombrereg=$_POST['name'];
 $descreg=$_POST['description'];
 $precioreg=$_POST['price'];
 $catreg=$_POST['category'];
+$filetmp = $_FILES["uploadedfile"]["tmp_name"];
+$filename = $_FILES["uploadedfile"]["name"];
+$filetype = $_FILES["uploadedfile"]["type"];
+$filepath = "/var/www/html/images/menu/".$filename;
 
 if($nombrereg&&$descreg&&$precioreg&&$catreg){
+	
+	move_uploaded_file($filetmp,$filepath);
 
 	$con = mysqli_connect("localhost", "phpuser", "phpuser", "vmenu");
 
-	$insert = "INSERT INTO Dishes(Name, Description, Price, Category) VALUES ('$nombrereg', '$descreg', '$precioreg', '$catreg')";
+	$insert = "INSERT INTO Dishes(Name, Description, Price, Category, imgName) VALUES ('$nombrereg', '$descreg', '$precioreg', '$catreg', '$filename')";
 	
 	$result = mysqli_query($con, $insert);
 
@@ -20,7 +26,5 @@ if($nombrereg&&$descreg&&$precioreg&&$catreg){
 }else{
 	echo "Fill out every field";
 }
-
-
 
 ?>

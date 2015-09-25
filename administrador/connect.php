@@ -1,4 +1,6 @@
 <?php
+	 session_start();
+	 $_SESSION["inicio"]= 1;
 
 	$inputuser=$_POST['user'];
 	$inputpass=$_POST['pass'];

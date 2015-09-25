@@ -2,6 +2,8 @@
     session_start();
     $id = session_id();
 
+    $_SESSION["envio"]= 1;
+
     $platiagreg = $_POST["agregar"];
     $priceplatiagreg = "";
 
@@ -30,14 +32,10 @@
         $cons3 = mysqli_query($mysqli, $insert);
 
 
-
-        mysqli_free_result($cons1);
         mysqli_free_result($cons2);
         mysqli_close($mysqli);
 
-
         header("Location: " . $_SERVER["HTTP_REFERER"]); 
     }
-
 
 ?>

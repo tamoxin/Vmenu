@@ -188,13 +188,14 @@ th {
 }
 
 
-td:nth-of-type(odd){
+/*td:nth-of-type(odd){
   width: 90%;
 
-}
+}*/
 
 td:nth-of-type(even){
     background: #DAF0D4;
+    width: 45%;
 
 }
 

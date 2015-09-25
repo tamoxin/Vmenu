@@ -34,9 +34,9 @@
         		$description = $tabla['description'][$x];
 				$image = $tabla['image'][$x];
 				$platillos.='<div class="col-md-3 offer-left">
-						<a href="single.html"><img src="images/menu/'.$image.'.jpg"alt="" />
+						<a><img src="images/menu/'.$image.'.jpg"alt="" />
 						<h6> $'.$price.'</h6></a>
-						<h4><a href="single.html"> '.$name.'</a></h4>
+						<h4><a> '.$name.'</a></h4>
 						<p> '.$description.'</p>
 						<div class="o-btn">	
                     	<form action="ordenchecar.php" method="post"> 

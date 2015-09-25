@@ -1,4 +1,6 @@
 <?php 
+    session_start();
+	
 	$name="";
     $price="";
     $description="";
@@ -14,7 +16,7 @@
     }
     else{
     	//se establece el query para la consulta
-        $sql = 'SELECT Name, Price, Description, ID FROM Dishes WHERE Category = 11';
+        $sql = 'SELECT Name, Price, Description, imgName FROM Dishes WHERE Category = 11';
 
         $cons = mysqli_query($mysqli, $sql);
 
@@ -24,7 +26,7 @@
         		$tabla['name'][] = $arreglo['Name'];
         		$tabla['price'][] = $arreglo['Price'];
         		$tabla['description'][] = $arreglo['Description'];
-				$tabla['image'][] = $arreglo['ID'];
+				$tabla['image'][] = $arreglo['imgName'];
         	}
 
 
@@ -36,9 +38,9 @@
 				if($x%4 != 0){
 					$platillos.='
 							<div class="col-md-3 offer-left">
-							<a href="single.html"><img src="images/menu/'.$image.'.jpg"alt="" />
+							<a><img src="images/menu/'.$image.'"alt="" />
 							<h6> $'.$price.'</h6></a>
-							<h4><a href="single.html"> '.$name.'</a></h4>
+							<h4><a> '.$name.'</a></h4>
 							<p> '.$description.'</p>
 							<div class="o-btn">	
 							<form action="ordenchecar.php" method="post"> 
@@ -51,9 +53,9 @@
 					$platillos.='<div class="clearfix"> </div>
 							<br> 
 							<div class="col-md-3 offer-left">
-							<a href="single.html"><img src="images/menu/'.$image.'.jpg"alt="" />
+							<a><img src="images/menu/'.$image.'"alt="" />
 							<h6> $'.$price.'</h6></a>
-							<h4><a href="single.html"> '.$name.'</a></h4>
+							<h4><a> '.$name.'</a></h4>
 							<p> '.$description.'</p>
 							<div class="o-btn">	
 							<form action="ordenchecar.php" method="post"> 
@@ -135,7 +137,7 @@
 			<div class="navigation">
 			 <span class="menu"></span> 
 				<ul class="navig">
-					<li><a href="index.php">Home</a><span> </span></li>
+					<li><a href="index.php">Orden</a><span> </span></li>
 					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
 					<li><a class="active" href="comidasycenas.php">Comidas y Cenas</a><span> </span></li>
 					<li><a href="postres.php">Postres</a><span> </span></li>
@@ -220,7 +222,12 @@
 </body>
 </html>
 
-
+<?php 
+    if($_SESSION["envio"]== 1){
+    	echo '<script language="javascript">alert("Se agrego el platillo a la orden");</script>'; 
+    }
+    $_SESSION["envio"]= 0;
+?>
 <!-- 
 Fruit_Salad Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design -->

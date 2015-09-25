@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(!isset($_SESSION["inicio"])){
+		header('Location: login.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -49,6 +56,7 @@
 					<li><a href="administrador.php">Home</a><span> </span></li>
 					<li><a class="active" href="usuarios.php">Usuarios</a><span> </span></li>
 					<li><a href="menu.php">Menú</a><span> </span></li>
+					<li><a href="cocina.php">Cocina</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -83,8 +91,10 @@
     });
   </script>
 			<!--End-slider-script-->
+			<br>
+			<center>
 <form action="registrar.php" method="post">
 <h3>Usuario</h3><input type="text" name="usuario"></input><br><br>
 <h3>Contraseña</h3><input type="password" name="pass"></input><br><br>
 <input type="submit" value="Agregar"></input>
-</form>
+</form> </center>

@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(!isset($_SESSION["inicio"])){
+		header('Location: login.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -49,6 +56,7 @@
 					<li><a href="administrador.php">Home</a><span> </span></li>
 					<li><a href="usuarios.php">Usuarios</a><span> </span></li>
 					<li><a class="active" href="menu.php">Menú</a><span> </span></li>
+					<li><a href="cocina.php">Cocina</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -83,7 +91,9 @@
     });
   </script>
 			<!--End-slider-script-->
+			<br>
+			<center>
 <form action="borrar.php" method="post">
 <h3>Id del platillo</h3><input type="text" name="id"></input><br><br>
 <input type="submit" value="Borrar"></input>
-</form>
+</form></center>

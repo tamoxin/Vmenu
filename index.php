@@ -2,9 +2,12 @@
     session_start();
     $id = session_id();
 
-    $dish="";
-    $price="";
+    $dish = "";
+    $price = "";
+    $quitar = "";
     $total= 0;
+
+    $i = 0;
 
 	 //se establece la conexi�n con el servidor
     $mysqli = mysqli_connect("localhost", "phpuser", "phpuser", "vmenu");
@@ -26,15 +29,18 @@
         		$tabla['Dish'][] = $arreglo['Dish'];
         		$tabla['Price'][] = $arreglo['Price'];
         	}
-
         	if(isset($tabla)){
 	        	for ($x=0; $x <= count($tabla['Dish'])-1; $x++){
-	        		$dish.= "<table><tr><td>".$tabla['Dish'][$x]."</td></tr></table>";
-	        		$price.= "<table><tr><td>".$tabla['Price'][$x]."</td></tr></table>";
+	        		$dish[$x]= $tabla['Dish'][$x];
+	        		$price[$x]= $tabla['Price'][$x];
+	        		$quitar[$x]= "
+	        				<form action='quitarplatillo.php' method='post'> 
+								<button type='submit' name='quitar' value='".$tabla['Dish'][$x]."' >Quitar</button> 
+							</form>";
 	                $total = $total + $tabla['Price'][$x];
+	                $i++;
 	        	}
         	}
-
         }
         else{
         	printf("Could not retrieve records: %s\n", mysqli_error($mysqli));
@@ -44,6 +50,7 @@
         mysqli_free_result($cons);
         mysqli_close($mysqli); 
     }
+
 ?>
 
 
@@ -91,7 +98,7 @@
 			<div class="navigation">
 			 <span class="menu"></span> 
 				<ul class="navig">
-					<li><a class="active" href="index.php">Home</a><span> </span></li>
+					<li><a class="active" href="index.php">Orden</a><span> </span></li>
 					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
 					<li><a href="comidasycenas.php">Comidas y Cenas</a><span> </span></li>
 					<li><a href="postres.php">Postres</a><span> </span></li>
@@ -118,13 +125,16 @@
 		<center>
 			<table border="1">
 			  <tr>
-			    <td>platillo</td>
-			    <td>precio</td>
+			    <th>platillo</th>
+			    <th>precio</th>
+			    <th>Quitar</th>
 			  </tr>
-			  <tr>
-			    <td><?php echo $dish; ?></td>
-			    <td><?php echo $price; ?></td>
-			  </tr>
+			  <?php 
+			 	for($x=0;$x<$i;$x++)
+			  	{
+			  		echo "<tr><td>".$dish[$x]."</td><td>".$price[$x]."</td><td>".$quitar[$x]."</td></tr>";
+			  	}
+			  ?>
 			</table><br><br>
 
 			<h3> Total: "<?php echo $total; ?>"</h3><br>
@@ -152,6 +162,14 @@
 	</body>
 </html>
 
+<?php 
+    if(isset($_SESSION["envio"])){
+	    if($_SESSION["envio"]== 1){
+	    	echo '<script language="javascript">alert("Se envio la orden");</script>'; 
+	    }
+	}
+    $_SESSION["envio"]= 0;
+?>
 
 <!-- 
 Fruit_Salad Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 

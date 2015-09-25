@@ -1,4 +1,9 @@
 <?php
+	session_start();
+	if(!isset($_SESSION["inicio"])){
+		header('Location: login.php');
+	}
+
 	$usuario="";
     $pass="";
 
@@ -124,6 +129,7 @@
     });
   </script>
 			<!--End-slider-script-->
+			<br>
 <center>
 <table border="1" id = "responsivetable">
   <tr>

@@ -45,13 +45,15 @@
 
                
                 if($nombre == $nombrereg){
-        	       $insert = "INSERT INTO Orden VALUES ('$id', '$nombre', $cuartoreg, curtime(), '$total', '$pagoreg', '$comentarioreg')";
+        	       $insert = "INSERT INTO Orden VALUES ('$id', '$nombre', $cuartoreg, curtime(), '$total', '$pagoreg', '$comentarioreg', 0)";
         	       $result = mysqli_query($con, $insert);
                    session_regenerate_id();
                 }
         	    mysqli_close($con);
-
-        	    header('Location: index.php?var=1');
+                
+                $_SESSION["envio"]= 1;
+        	    
+                header('Location: index.php?var=1');
 
         }
         else{

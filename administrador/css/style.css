@@ -339,7 +339,7 @@ ul.navig li:nth-of-type(3) {
 
 .bannerHome{
   background: url(../images/home.jpg) no-repeat center;
-  min-height: 640px;
+  min-height: 450px;
   background-size: cover;
   margin-bottom: 15px;
   -webkit-background-size: cover;

@@ -1,4 +1,9 @@
-<?php 
+<?php
+	session_start();
+	if(!isset($_SESSION["inicio"])){
+		header('Location: login.php');
+	}
+
 	$ID = "";
     $User = "";
     $Room = "";
@@ -9,6 +14,8 @@
 
     $orden = "";
 
+    $aux = 0;
+
 	$mysqli = mysqli_connect("localhost", "phpuser", "phpuser", "vmenu");
 
 	if (mysqli_connect_errno()) {
@@ -16,7 +23,7 @@
         exit();
     }
     else{
-    	$sql = 'SELECT Orden.ID, Orden.User, Orden.Room, Orden.Hour, Orden.Price, Payment.name, Orden.Comentario FROM Orden INNER JOIN Payment ON Payment.ID = Orden.Payment';
+    	$sql = 'SELECT Orden.ID, Orden.User, Orden.Room, Orden.Hour, Orden.Price, Payment.name, Orden.Comentario FROM Orden INNER JOIN Payment ON Payment.ID = Orden.Payment WHERE Aux = 0 ORDER BY Hour DESC';
 
         $cons = mysqli_query($mysqli, $sql);
 
@@ -29,77 +36,84 @@
                 $tabla['Price'][] = $arreglo['Price'];
                 $tabla['Payment'][] = $arreglo['name'];
                 $tabla['Comentario'][] = $arreglo['Comentario'];
+                $aux = 1;
             }
 
+            if($aux == 1){
+	            for ($x=0; $x <= count($tabla['ID'])-1; $x++){
+	                $User = "<table><tr><td>".$tabla['User'][$x]."</td></tr></table>";
+	                $Room = "<table><tr><td>".$tabla['Room'][$x]."</td></tr></table>";
+	                $Hour = "<table><tr><td>".$tabla['Hour'][$x]."</td></tr></table>";
+	                $Price = "<table><tr><td>".$tabla['Price'][$x]."</td></tr></table>";
+	                $Payment = "<table><tr><td>".$tabla['Payment'][$x]."</td></tr></table>";
+	                $Comentario = "<table><tr><td>".$tabla['Comentario'][$x]."</td></tr></table>";
 
-            for ($x=0; $x <= count($tabla['ID'])-1; $x++){
-                $ID = "<table><tr><td>".$tabla['ID'][$x]."</td></tr></table>";
-                $User = "<table><tr><td>".$tabla['User'][$x]."</td></tr></table>";
-                $Room = "<table><tr><td>".$tabla['Room'][$x]."</td></tr></table>";
-                $Hour = "<table><tr><td>".$tabla['Hour'][$x]."</td></tr></table>";
-                $Price = "<table><tr><td>".$tabla['Price'][$x]."</td></tr></table>";
-                $Payment = "<table><tr><td>".$tabla['Payment'][$x]."</td></tr></table>";
-                $Comentario = "<table><tr><td>".$tabla['Comentario'][$x]."</td></tr></table>";
 
+	                $Dish = "";
+	                $PriceD = "";
 
-                $Dish = "";
-                $PriceD = "";
+	                $sql1 = 'SELECT Dish, Price FROM DetOrder WHERE ID = "'.$tabla['ID'][$x].'"';
+	                $cons1 = mysqli_query($mysqli, $sql1);
 
-                $sql1 = 'SELECT Dish, Price FROM DetOrder WHERE ID = "'.$tabla['ID'][$x].'"';
-                $cons1 = mysqli_query($mysqli, $sql1);
+	                if ($cons1) {
+						while ($arregloo = mysqli_fetch_array($cons1, MYSQLI_ASSOC)) {
+			                $tablaa['Dish'][] = $arregloo['Dish'];
+			                $tablaa['PriceD'][] = $arregloo['Price'];
+		                }
+		                for ($y=0; $y <= count($tablaa['Dish'])-1; $y++){
+			                $Dish .= "<table><tr><td>".$tablaa['Dish'][$y]."</td></table>";
+			                $PriceD .= "<table><tr><td>".$tablaa['PriceD'][$y]."</td></tr></table>";
+	                	}
+	                	$tablaa = null;
+	                	$arregloo = null;
+		            }
 
-                if ($cons1) {
-					while ($arregloo = mysqli_fetch_array($cons1, MYSQLI_ASSOC)) {
-		                $tablaa['Dish'][] = $arregloo['Dish'];
-		                $tablaa['PriceD'][] = $arregloo['Price'];
-	                }
-	                for ($y=0; $y <= count($tablaa['Dish'])-1; $y++){
-		                $Dish .= "<table><tr><td>".$tablaa['Dish'][$y]."</td></table>";
-		                $PriceD .= "<table><tr><td>".$tablaa['PriceD'][$y]."</td></tr></table>";
-                	}
-                	$tablaa = null;
-                	$arregloo = null;
+		            $orden.='<center>
+		            			<br>
+							    <table border="1" id = "responsivetable">
+									  <tr>
+									    <td>Usuario</td>
+									    <td>Cuarto</td>
+									    <td>Hora</td>
+									    <td>Precio Total</td>
+									    <td>Modo de pago</td>
+									    <td>Comentario</td>
+									  </tr>
+									  <tr>
+									    <td>'.$User. '</td>
+									    <td>'.$Room. '</td>
+									    <td>'.$Hour. '</td>
+									    <td>'.$Price. '</td>
+									    <td>'.$Payment. '</td>
+									    <td>'.$Comentario.'</td>
+									  </tr>
+								</table>
+								<table border="1" id = "responsivetable">
+									  <tr>
+									    <td>Platillo</td>
+									    <td>Precio</td>
+									  </tr>
+									  <tr>
+									    <td>'.$Dish.'</td>
+							    		<td>'.$PriceD.'</td>
+									  </tr>
+								</table>
+								<form action="quitarorden.php" method="post"> 
+									<button type="submit" name="quitaro" value="'.$tabla['ID'][$x].'"" >Quitar Orden</button> 
+								</form>
+						    </center>
+		            ';
 	            }
-
-	            $orden.='<center>
-						    <table border="1" id = "responsivetable">
-								  <tr>
-								    <td>Usuario</td>
-								    <td>Cuarto</td>
-								    <td>Hora</td>
-								    <td>Precio Total</td>
-								    <td>Modo de pago</td>
-								    <td>Comentario</td>
-								  </tr>
-								  <tr>
-								    <td>'.$User. '</td>
-								    <td>'.$Room. '</td>
-								    <td>'.$Hour. '</td>
-								    <td>'.$Price. '</td>
-								    <td>'.$Payment. '</td>
-								    <td>'.$Comentario.'</td>
-								  </tr>
-							</table>
-							<table border="1" id = "responsivetable">
-								  <tr>
-								    <td>Platillo</td>
-								    <td>Precio</td>
-								  </tr>
-								  <tr>
-								    <td>'.$Dish.'</td>
-						    		<td>'.$PriceD.'</td>
-								  </tr>
-							</table>
-							<br>
-					    </center>
-	            ';
-            }
+        	}
         }
         else{
         	printf("Could not retrieve records: %s\n", mysqli_error($mysqli));
         }
     }
 
+
+    $page = $_SERVER['PHP_SELF'];
+	$sec = "10";
 ?>
 
 <!DOCTYPE html>
@@ -109,6 +123,7 @@
 <head>
 <title>Vmenu_Equipo4</title>
 
+<meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html;" />
 <meta name="keywords" content="" />
@@ -167,10 +182,7 @@
 		</div>
 	</div>	
 	<!----end-header---->
-	<!--banner-starts-->
-	<div class="bannerHome" id="home">
-	</div>	
-	<!--banner-ends--> 
+
 
 		<?php echo $orden;?>
 

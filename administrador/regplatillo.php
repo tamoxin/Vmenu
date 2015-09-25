@@ -1,4 +1,9 @@
 <?php
+	session_start();
+	if(!isset($_SESSION["inicio"])){
+		header('Location: login.php');
+	}
+
 	$id="";
     $name="";
 
@@ -89,6 +94,7 @@
 					<li><a href="administrador.php">Home</a><span> </span></li>
 					<li><a href="usuarios.php">Usuarios</a><span> </span></li>
 					<li><a class="active" href="menu.php">Menú</a><span> </span></li>
+					<li><a href="cocina.php">Cocina</a><span> </span></li>
 				</ul>
 			</div>
 				 <!-- script-for-menu -->
@@ -123,6 +129,8 @@
     });
   </script>
 			<!--End-slider-script-->
+			<br>
+			<center>
 			<table border="1">
   <tr>
     <td>id</td>
@@ -134,10 +142,11 @@
   </tr>
 </table><br><br>
 
-<form action="registrar2.php" method="post">
+<form enctype="multipart/form-data" action="registrar2.php" method="post">
 <h3>Nombre del platillo</h3><input type="text" name="name"></input><br><br>
 <h3>Descripción</h3><input type="text" name="description"></input><br><br>
 <h3>Precio</h3><input type="text" name="price"></input><br><br>
 <h3>Categoría (ID)</h3><input type="text" name="category"></input><br><br>
+<input name="uploadedfile" type="file" /><br><br>
 <input type="submit" value="Agregar"></input>
-</form>
+</form></center>

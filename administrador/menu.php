@@ -1,4 +1,9 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["inicio"])){
+        header('Location: login.php');
+    }
+
 	$id="";
     $name="";
     $price="";

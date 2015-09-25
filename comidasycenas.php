@@ -46,7 +46,7 @@
 			<div class="navigation">
 			 <span class="menu"></span> 
 				<ul class="navig">
-					<li><a href="index.php">Home</a><span> </span></li>
+					<li><a href="index.php">Orden</a><span> </span></li>
 					<li><a href="desayunos.php">Desayunos</a><span> </span></li>
 					<li><a class="active" href="comidasycenas.php">Comidas y Cenas</a><span> </span></li>
 					<li><a href="postres.php">Postres</a><span> </span></li>
